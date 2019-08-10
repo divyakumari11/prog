@@ -1,0 +1,27 @@
+#include <stdio.h>
+  #include <math.h>
+  int main() {
+        int a, b, c, temp;
+        float proot, nroot;
+        printf("aX^2 - bX + c\n");
+        printf("Enter your value for a, b and c:");
+        /* get the input from user */
+        scanf("%d%d%d", &a, &b, &c);
+
+        temp  = (b * b) - (4 * a * c);
+        if (temp < 0) {
+                printf("Imaginary root\n");
+                return 0;
+        }
+
+        /* positive root calculation */
+        proot = (-b + sqrt(temp)) / (2.0 * a);
+
+        /* negative root calculation */
+        nroot = (-b - sqrt(temp)) / (2.0 * a);
+
+        /* result */
+        printf("roots of the given quadratic equations:\n");
+        printf("%.2f  %.2f\n", proot, nroot);
+        return 0;
+  }
